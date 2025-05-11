@@ -1,0 +1,16 @@
+parameters:
+  - $ref: "../../components/parameters/path/uuid.yaml"
+get:
+  tags:
+    - User
+  summary: 查询user信息
+  responses:
+    "200":
+      description: user response
+      content:
+        application/json:
+        schema:
+          $ref: '#/components/schemas/User'
+    '400':
+      description: Invalid ID supplied
+

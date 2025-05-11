@@ -1,0 +1,1 @@
+@echo on speccy resolve ..\..\api\src\main\resources\openapi.yaml -o

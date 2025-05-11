@@ -1,0 +1,8 @@
+type: object
+properties:
+  name:
+    type: string
+    description: 操作的名称
+  isEnabled:
+    type: boolean
+    description: 操作是否启用

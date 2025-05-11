@@ -1,0 +1,50 @@
+openapi: 3.0.3
+info:
+  title: my Restful APIs
+  version: 1.0.1
+  description: 这是一个openapi模版
+  termsOfService: https://example.com/terms/
+  contact:
+    name: API Support
+    url: https://example.com/support
+    email: support@example.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: /api/v4
+    description: api的基础路径
+  - url: https://{username}.gigantic-server.com:{port}/{basePath}
+    description: The production API server
+    variables:
+      username:
+        # note! no enum here means it is an open value
+        default: demo
+        description: this value is assigned by the service provider, in this example `gigantic-server.com`
+      port:
+        enum:
+          - '8443'
+          - '443'
+        default: '8443'
+      basePath:
+        # open meaning there is the opportunity to use special base paths as assigned by the provider, default is `v2`
+        default: v2
+security:
+  - BearerAuth: [ ]
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    $ref: "./components/schemas/_index.yaml"
+  parameters:
+    $ref: "./components/parameters/_index.yaml"
+  responses:
+    $ref: "./components/responses/_index.yaml"
+
+paths:
+  $ref: "./paths/_index.yaml"
+

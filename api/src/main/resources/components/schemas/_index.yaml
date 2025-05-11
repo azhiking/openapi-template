@@ -1,0 +1,7 @@
+Entity:
+  $ref: "./Entity.yaml"
+Operation:
+  $ref: "./Operation.yaml"
+
+User:
+  $ref: "./user/User.yaml"

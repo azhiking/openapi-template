@@ -1,0 +1,28 @@
+type: object
+properties:
+  id:
+    type: string
+    description: 用户的唯一标识符
+  name:
+    type: string
+    description: 用户的名称
+  email:
+    type: string
+    format: email
+    description: 用户的电子邮件地址
+  password:
+    type: string
+    description: 用户的密码
+  roles:
+    type: array
+    items:
+      type: string
+      description: 用户的角色列表
+  createdAt:
+    type: string
+    format: date-time
+    description: 用户创建时间
+  updatedAt:
+    type: string
+    format: date-time
+    description: 用户更新时间

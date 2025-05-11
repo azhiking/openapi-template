@@ -1,0 +1,2 @@
+/user/{uuid}:
+    $ref: "./user/User.yaml"
